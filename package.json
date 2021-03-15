@@ -1,6 +1,6 @@
 {
   "name": "egg-multipart-mailer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "可用于多个发送人配置的邮件插件，可用于saas系统，根据实时配置实例化发送邮件实例",
   "eggPlugin": {
     "name": "multipartMailer"
@@ -48,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-multipart-mailer.git"
+    "url": "https://github.com/jasonLaw1015/egg-multipart-mailer"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/jasonLaw1015/egg-multipart-mailer/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-multipart-mailer#readme",
+  "homepage": "https://github.com/jasonLaw1015/egg-multipart-mailer/blob/master/README.md",
   "author": "jasonlaw",
   "license": "MIT"
 }
