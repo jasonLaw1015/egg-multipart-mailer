@@ -16,7 +16,7 @@ $ npm i egg-multipart-mailer --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.mailer = {
+exports.multipartMailer = {
   enable: true,
   package: 'egg-multipart-mailer',
 };
@@ -27,7 +27,7 @@ exports.mailer = {
 ```js
 // {app_root}/config/config.default.js
  不用配置，调用时才传入
-exports.mailer = {
+exports.multipartMailer = {
 };
 ```
 
