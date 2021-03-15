@@ -24,7 +24,7 @@ describe('test/multipart-mailer.test.js', () => {
     //     secure: true, // true for 465, false for other ports
     //     auth: {
     //       user: 'XXXXXX@qq.com', // generated ethereal user
-    //       pass: 'wlsdgnsgsjlwbbjf',
+    //       pass: 'xxxx',
     //     },
     //   };
     //   const ctx = app.mockContext();
