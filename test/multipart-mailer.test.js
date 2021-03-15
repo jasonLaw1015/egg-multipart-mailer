@@ -18,23 +18,23 @@ describe('test/multipart-mailer.test.js', () => {
   it('should send email', async () => {
     try {
       const emailConf = {
-        // host: "smtp.ethereal.email",
+        // host: 'smtp.ethereal.email',
         service: 'qq',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-          user: 'xxx@qq.com', // generated ethereal user //把这几个值修改下就可以测试
-          pass: 'tzwkksppnvrjbbaj',//把这几个值修改下就可以测试
+          user: 'XXXXXX@qq.com', // generated ethereal user
+          pass: 'wlsdgnsgsjlwbbjf',
         },
       };
       const ctx = app.mockContext();
       const mailer = ctx.app.initMultipartMailer(emailConf);
       // sync
       await mailer.send({
-        from: 'xxx@qq.com', // sender address, [options] default to user//把这几个值修改下就可以测试
+        from: 'XXXXXX@qq.com', // sender address, [options] default to user//把这几个值修改下就可以测试
         // // Array => ['bar@example.com', 'baz@example.com']//把这几个值修改下就可以测试
-        to: 'xxx@163.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
+        to: '13xxxxx@163.com', // list of receivers
+        subject: 'Hello ✔2', // Subject line
         text: 'Hello world?', // plain text body
         html: '<b>Hello world?</b>', // html body
       });

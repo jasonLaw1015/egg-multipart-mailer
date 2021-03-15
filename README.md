@@ -40,19 +40,20 @@ class HomeController extends Controller {
   async index() {
     const { ctx, app } = this;
     const config ={
-              host: "smtp.ethereal.email",
+              // host: "smtp.ethereal.email",
               service: "qq",
               port: 465,
               secure: true, // true for 465, false for other ports
               auth: {
-                user: testAccount.user, // generated ethereal user
-                pass: testAccount.pass  // generated ethereal password
+                user: testAccount.user, // generated ethereal user 
+                pass: testAccount.pass  // generated ethereal password 如何获取这些密码。参考https://blog.csdn.net/qq_40571631/article/details/89206851
               }
             };
     const mailer = this.app.initMultipartMailer(config);
+    // 注意下面的from的值要跟上面的cofig.auth.user的一样
     // sync
     await mailer.send({
-      from: '"Fred Foo 👻" <foo@example.com>', // sender address, [options] default to user
+      from: testAccount.user, // sender address
       // // Array => ['bar@example.com', 'baz@example.com']
       to: "bar@example.com, baz@example.com", // list of receivers
       subject: "Hello ✔", // Subject line
@@ -61,7 +62,7 @@ class HomeController extends Controller {
     });
     // async
     mailer.send({
-      from: '"Fred Foo 👻" <foo@example.com>',
+      from: testAccount.user,
       // Array => ['bar@example.com', 'baz@example.com']
       to: "bar@example.com, baz@example.com",
       subject: "Hello ✔",
